@@ -9,7 +9,7 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
-    private Integer idProduct;
+    private Integer idProducto;
 
     private String nombre;
 
@@ -31,12 +31,12 @@ public class Producto {
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
-    public Integer getIdProduct() {
-        return idProduct;
+    public Integer getIdProducto() {
+        return idProducto;
     }
 
-    public void setIdProduct(Integer idProduct) {
-        this.idProduct = idProduct;
+    public void setIdProducto(Integer idProduct) {
+        this.idProducto = idProduct;
     }
 
     public String getNombre() {
