@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Persistent Data ###
+config-database/postgres-data
