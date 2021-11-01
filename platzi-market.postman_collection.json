@@ -9,7 +9,14 @@
 			"name": "Get all products",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmdlbCIsImlhdCI6MTYzNTc4NzMyNiwiZXhwIjoxNjM1ODIzMzI2fQ.oGVHCd9Z-xiLIR0QmXyms33cSv53dnMvkk5p7jh8rf8",
+						"type": "text",
+						"disabled": true
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8090/platzi-market/api/products",
 					"protocol": "http",
@@ -193,6 +200,97 @@
 						"platzi-market",
 						"api",
 						"purchases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"angel\",\n    \"password\" : \"examplepasswordapi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/platzi-market/api/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"platzi-market",
+						"api",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate in Heroku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"angel\",\n    \"password\" : \"examplepasswordapi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://angelmarketplace.herokuapp.com/platzi-market/api/auth/authenticate",
+					"protocol": "http",
+					"host": [
+						"angelmarketplace",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"platzi-market",
+						"api",
+						"auth",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all products in Heroku",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmdlbCIsImlhdCI6MTYzNTc5Mjk4NywiZXhwIjoxNjM1ODI4OTg3fQ.Z54ICNPO97RAdlkgKpez6V6p9MEn9odkU3mCR4LA5dU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://angelmarketplace.herokuapp.com/platzi-market/api/products",
+					"protocol": "http",
+					"host": [
+						"angelmarketplace",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"platzi-market",
+						"api",
+						"products"
 					]
 				}
 			},
